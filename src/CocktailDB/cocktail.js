@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import './Cocktail.css'
-import OpenBrewery from '../OpenBreweryDB/OpenBrewery';
+import './Cocktail.css';
 
 class Cocktail extends Component {
 
@@ -24,7 +23,6 @@ class Cocktail extends Component {
             return response.json();
         })
         .then(data => {
-            console.log(data)
             this.setState({
                 results: [ 
                     ...this.state.results, data
@@ -45,7 +43,8 @@ class Cocktail extends Component {
         return (
             <section className="cocktail-db">
                 <section className="info">
-                    <p>Not sure what you want? Generate a recipe at random courtesy of <a href="https://www.thecocktaildb.com/" target="_blank">Cocktail DB API</a></p>
+                    <p>Not sure what you want?</p> 
+                    <p>Generate a recipe at random courtesy of <a href="https://www.thecocktaildb.com/" rel="noreferrer noopener" target="_blank">Cocktail DB API</a></p>
                 </section>
                 <form className="cocktail-db-api" onSubmit={this.handleSubmit}>
                     <button type="submit" id="random" name="random">Generate random drink!</button>
@@ -54,12 +53,12 @@ class Cocktail extends Component {
                     <div className="result">
                         {this.state.results.map((res) => (
                             <div>
-                                <img id="cocktail-img" src={res.drinks[0].strDrinkThumb}></img>
+                                <img id="cocktail-img" alt="cocktail" src={res.drinks[0].strDrinkThumb}></img>
                                 <p>Drink name: {res.drinks[0].strDrink}</p>
                                 <p>Glass: {res.drinks[0].strGlass}</p>
                                 <div>
                                     <p>Ingredients:</p> 
-                                    <p>{res.drinks[0].strMeasure1} {res.drinks[0].strIngredient1}</p>
+                                    <p>{res.drinks[0].strMeasure1}  {res.drinks[0].strIngredient1}</p>
                                     <p>{res.drinks[0].strMeasure2}  {res.drinks[0].strIngredient2}</p>
                                     <p>{res.drinks[0].strMeasure3}  {res.drinks[0].strIngredient3}</p>
                                     <p>{res.drinks[0].strMeasure4}  {res.drinks[0].strIngredient4}</p>
@@ -67,7 +66,7 @@ class Cocktail extends Component {
                                     <p>{res.drinks[0].strMeasure6}  {res.drinks[0].strIngredient6}</p> 
                                     <p>{res.drinks[0].strMeasure7}  {res.drinks[0].strIngredient7}</p>
                                     <p>{res.drinks[0].strMeasure8}  {res.drinks[0].strIngredient8}</p>
-                                    <p>{res.drinks[0].strMeasure9} {res.drinks[0].strIngredient9}</p>
+                                    <p>{res.drinks[0].strMeasure9}  {res.drinks[0].strIngredient9}</p>
                                     <p>{res.drinks[0].strMeasure10} {res.drinks[0].strIngredient10}</p>
                                     <p>{res.drinks[0].strMeasure11} {res.drinks[0].strIngredient11}</p>
                                 </div>

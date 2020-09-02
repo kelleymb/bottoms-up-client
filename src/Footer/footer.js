@@ -4,11 +4,9 @@ import './Footer.css';
 class Footer extends Component {
     render() {
         return (
-            <section>
-                <h2></h2>
-            </section>
+          <footer className="footer">&copy; kelleymb 2020</footer>
         );
-    }
+      }
 }
 
 export default Footer;

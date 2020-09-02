@@ -48,7 +48,8 @@ class OpenBrewery extends Component {
         return (
             <section className="open-brewery-db">
                 <section className="info">
-                    <p>Need a break? Search your local breweries courtesy of <a href="https://www.openbrewerydb.org/" target="_blank">Open Brewery API</a></p>
+                    <p>Need a break?</p> 
+                    <p>Search your local breweries courtesy of <a href="https://www.openbrewerydb.org/" rel="noreferrer noopener" target="_blank">Open Brewery API</a></p>
                 </section>
                 <section className="open-brewery-db-form">
                     <h4>Search by Postal Code</h4>

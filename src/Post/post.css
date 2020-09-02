@@ -1,0 +1,14 @@
+.post-form {
+    padding: 25px;
+}
+
+.instructions, .ingredients {
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+}
+
+#drink-name-input, #main-liquor-input {
+    width: 400px;
+    padding: 5px;
+}

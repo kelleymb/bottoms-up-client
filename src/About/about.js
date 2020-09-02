@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
-import './About.css'
+import './About.css';
 
 class About extends Component {
     render() {
         return (
-            <section>
+            <section className="about">
                 <h2>About</h2>
                 <h3>Why Bottoms Up?</h3>
                     <p>Since COVID hit the US, so much has changed in our routines. With quarantines and social distancing, things have never been so glum!</p>
                     <p>But fear not, Bottoms Up! is here to help you quarantine in style, whether it's a virtual happy hour or a weekend at home, we've got you covered. </p>
                     <p>Be your own bartender, search through recipes and even post your own creations!</p>
-                    <p>If you're needing some inspiration, use our random drink generator courtesy of <a href="https://www.thecocktaildb.com/" target="_blank">Cocktail DB API</a> and if you need a break and want to pick up from a local brewery, check out the brewery locator courtesy of <a href="https://www.openbrewerydb.org/" target="_blank" >Open Brewery API</a></p>
+                    <p>If you're needing some inspiration, use our random drink generator courtesy of <a href="https://www.thecocktaildb.com/" rel="noreferrer noopener" target="_blank">Cocktail DB API</a> and if you need a break and want to pick up from a local brewery, check out the brewery locator courtesy of <a href="https://www.openbrewerydb.org/" rel="noreferrer noopener" target="_blank" >Open Brewery API</a></p>
                 <h3>How to get started</h3>
                     <ol>
                         <li>Browse through our collection.</li>
