@@ -53,7 +53,11 @@ class Cocktail extends Component {
                 </form>    
                 <section className="api-result">
                     <div className="result">
-                        {this.state.results}
+                        {this.state.results.map(result => {
+                            <div>
+                                <p>{result.strDrink}</p>
+                            </div>
+                        })}
                     </div>
                 </section>
             </section>
