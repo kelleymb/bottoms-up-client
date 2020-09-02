@@ -10,7 +10,7 @@ class Post extends Component {
 
     render() {
         return (
-            <section>
+            <section className="post-section">
                 <form className="post-form" onSubmit={this.handleSubmit}>
                     <label htmlFor="drink-name" id="drink-name">Drink Name:</label><br/>
                     <input type="text" id="drink-name-input" name="drink-name"></input><br/>
