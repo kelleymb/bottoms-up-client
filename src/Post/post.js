@@ -19,7 +19,8 @@ class Post extends Component {
                     <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label><br/>
                     <textarea className="ingredients"></textarea><br/>
                     <label htmlFor="instructions-list" id="instructions">Ingredients:</label><br/>
-                    <textarea className="instructions"></textarea>
+                    <textarea className="instructions"></textarea><br/>
+                    <button type="submit" id="submit-btn">Submit</button><br/>
                 </form>
             </section>
         );

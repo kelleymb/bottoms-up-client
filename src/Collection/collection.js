@@ -61,8 +61,8 @@ class Collection extends Component {
             <section className="collection">
                 <Cocktail />
                 <OpenBrewery />
-                <h3>Browse our collection</h3>
-                <form className="search-form" onSubmit={this.handleSubmit}>
+                <h3 className="browse">Browse our collection</h3><br/>
+                <form className="main-search-form" onSubmit={this.handleSubmit}>
                     <select id="rating-input" name="rating-input">
                         <option value={vodka}>Vodka</option>
                         <option value={tequila}>Tequila</option>
@@ -71,7 +71,7 @@ class Collection extends Component {
                         <option value={scotch}>Scotch</option>
                     </select>
                     <button type="submit" className="search-btn">Search</button>
-                </form>
+                </form><br />
                 <section className="results">
                     <p>{this.props.recipes}</p>
                 </section>

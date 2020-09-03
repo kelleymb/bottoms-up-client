@@ -1,3 +1,7 @@
 .collection {
     padding: 10px;
 }
+
+.results, .browse, .main-search-form {
+    text-align: center;
+}
