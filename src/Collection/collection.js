@@ -65,10 +65,10 @@ class Collection extends Component {
                     <section className="results">
                         <p>{this.state.results.map((result) => (
                             <div classname="collection-search-result">
-                                <h3>Drink Name: ${result.drink_name}</h3>
-                                <h3>Main Liquor: ${result.main_liquor}</h3>
-                                <p>Ingredients: ${result.ingredients}</p>
-                                <p>Instructions: ${result.instructions}</p>
+                                <h3>Drink Name: {result.drink_name}</h3>
+                                <h3>Main Liquor: {result.main_liquor}</h3>
+                                <p>Ingredients: {result.ingredients}</p>
+                                <p>Instructions: {result.instructions}</p>
                             </div>
                         ))}</p>
                     </section> 
