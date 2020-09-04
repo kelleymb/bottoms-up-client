@@ -52,7 +52,7 @@ class Post extends Component {
                     <input type="text" id="main-liquor-input" name="main-liquor"></input>
                     <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
                     <textarea id="ingredients-input" className="ingredients"></textarea>
-                    <label htmlFor="instructions-list" id="instructions">Ingredients:</label>
+                    <label htmlFor="instructions-list" id="instructions">Instructions:</label>
                     <textarea id="instructions-input" className="instructions"></textarea>
                     <button type="submit" id="submit-btn">Submit</button>
                 </form>
