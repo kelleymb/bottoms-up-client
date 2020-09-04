@@ -10,7 +10,7 @@ class Nav extends Component {
         return (
             <ul>
                 <li className="nav" key={Home}><Link className="nav-link" to="/">Home</Link></li>
-                <li className="nav" key={Collection}><Link className="nav-link" to="/collection">Collection</Link></li>
+                <li className="nav" key={Collection}><Link className="nav-link" to="/collections">Collection</Link></li>
                 <li className="nav" key={Post}><Link className="nav-link" to="/post">Post</Link></li>
             </ul>
         );
