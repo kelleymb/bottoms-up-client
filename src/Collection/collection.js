@@ -1,79 +1,77 @@
 import React, {Component} from 'react';
 import Cocktail from '../CocktailDB/Cocktail';
 import OpenBrewery from '../OpenBreweryDB/OpenBrewery';
+import config from '../config';
 import './Collection.css';
-
-const vodka = [
-    { 
-        name: "vodka-drink",
-        main: "vodka",
-        ingredients: "ingredients for vodka-drink",
-        instructions: "instructions for vodka-drink"
-    }
-]
-
-const tequila = [
-    { 
-        name: "tequila-drink",
-        main: "tequila",
-        ingredients: "ingredients for tequila-drink",
-        instructions: "instructions for tequila-drink"
-    }
-]
-
-const gin = [
-    { 
-        name: "gin-drink",
-        main: "gin",
-        ingredients: "ingredients for gin-drink",
-        instructions: "instructions for gin-drink"
-    }
-]
-
-const rum = [
-    { 
-        name: "rum-drink",
-        main: "rum",
-        ingredients: "ingredients for rum-drink",
-        instructions: "instructions for rum-drink"
-    }
-]
-
-const scotch = [
-    { 
-        name: "scotch-drink",
-        main: "scotch",
-        ingredients: "ingredients for scotch-drink",
-        instructions: "instructions for scotch-drink"
-    }
-]
 
 
 class Collection extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            results: [],
+        }
+    }
+
     handleSubmit = e => {
         e.preventDefault();
-        alert('Search button works!')
+        this.setState({
+            results: [],
+        });
+        const main_liquor = e.target['main-input'].value;
+        fetch(`${config.API_ENDPOINT}/collections?main_liquor=${main_liquor}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Something went wrong. Please try again.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data)
+                this.setState({
+                    results: [
+                        ...data
+                    ]
+                });
+            })
+            .catch(error => {
+                console.error({ error });
+                console.log(error);
+            });
     }
 
     render() {
         return (
             <section className="collection">
-                <Cocktail />
-                <OpenBrewery />
-                <h3 className="browse">Browse our collection</h3><br/>
-                <form className="main-search-form" onSubmit={this.handleSubmit}>
-                    <select id="rating-input" name="rating-input">
-                        <option value={vodka}>Vodka</option>
-                        <option value={tequila}>Tequila</option>
-                        <option value={gin}>Gin</option>
-                        <option value={rum}>Rum</option>
-                        <option value={scotch}>Scotch</option>
-                    </select>
-                    <button type="submit" className="search-btn">Search</button>
-                </form><br />
-                <section className="results">
-                    <p>{this.props.recipes}</p>
+                <section className="cocktail-api-section">
+                  <Cocktail />  
+                </section>
+                <section className="openbrewery-api-section">
+                   <OpenBrewery /> 
+                </section>
+                <section className="collection-search-section">
+                   <h3 className="browse">Browse our collection</h3>
+                    <form className="main-search-form" onSubmit={this.handleSubmit}>
+                        <select id="main-input" name="main-input">
+                            <option value="Vodka">Vodka</option>
+                            <option value="Tequila">Tequila</option>
+                            <option value="Gin">Gin</option>
+                            <option value="Rum">Rum</option>
+                            <option value="Scotch">Scotch</option>
+                        </select>
+                        <button type="submit" className="search-btn">Search</button>
+                    </form>
+                    <section className="results">
+                        <p>{this.state.results.map(result => {
+                            <div classname="collection-search-result">
+                                <h3>Drink Name: ${result.drink_name}</h3>
+                                <h3>Main Liquor: ${result.main_liquor}</h3>
+                                <p>Ingredients: ${results.ingredients}</p>
+                                <p>Instructions: ${results.instructions}</p>
+                            </div>
+                        })}</p>
+                    </section> 
                 </section>
             </section>
         );
