@@ -57,7 +57,7 @@ class Cocktail extends Component {
                     <section className="api-result">
                         <div className="result">
                             {this.state.results.map((res) => (
-                                <div className="cocktail-result-block">
+                                <div key={res.drinks[0].strDrink} className="cocktail-result-block">
                                     <img id="cocktail-img" alt="cocktail" src={res.drinks[0].strDrinkThumb}></img>
                                     <p>Drink name: {res.drinks[0].strDrink}</p>
                                     <p>Glass: {res.drinks[0].strGlass}</p>

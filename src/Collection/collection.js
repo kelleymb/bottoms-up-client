@@ -65,14 +65,14 @@ class Collection extends Component {
                             <button type="submit" id="search-btn" onClick={this.props.onClick} aria-label="Submit">Search</button>
                         </form>
                         <section className="results">
-                            <p>{this.state.results.map((result) => (
-                                <div classname="collection-search-result">
+                            <div>{this.state.results.map((result) => (
+                                <div key={result.drink_name} className="collection-search-result">
                                     <h3>Drink Name: {result.drink_name}</h3>
-                                    <h3>Main Liquor: {result.main_liquor}</h3>
-                                    <p>Ingredients: {result.ingredients}</p>
-                                    <p>Instructions: {result.instructions}</p>
+                                    <h4>Main Liquor: {result.main_liquor}</h4>
+                                    <div>Ingredients: {result.ingredients}</div>
+                                    <div>Instructions: {result.instructions}</div>
                                 </div>
-                            ))}</p>
+                            ))}</div>
                         </section> 
                     </section>
                 </section>

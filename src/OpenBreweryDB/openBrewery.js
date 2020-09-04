@@ -62,7 +62,7 @@ class OpenBrewery extends Component {
                         </form>
                         <section className="results">
                             {this.state.results.map((result) => (
-                                <div className="result">
+                                <div key={result.name} className="result">
                                     <p>Name: {result.name}</p>
                                     <p>Postal Code: {result.postal_code}</p>
                                     <p>State: {result.state}</p>
