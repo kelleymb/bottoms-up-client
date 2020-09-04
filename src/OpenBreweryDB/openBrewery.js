@@ -27,8 +27,8 @@ class OpenBrewery extends Component {
             return response.json();
         })
         .then(data => {
-            if (data.length < 1) {
-                throw new Error(`Oops! There are no results for ${postalCode}. Please try again.`);
+            if (data.values() === null) {
+                console.error(`Oops! There are no results for ${postalCode}. Please try again.`);
             } else {
                 this.setState({
                     results: [
