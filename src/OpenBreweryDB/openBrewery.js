@@ -58,7 +58,7 @@ class OpenBrewery extends Component {
                         <form className="search-form" onSubmit={this.handleSubmit}>
                             <label htmlFor="postal-code" id="postal-label" aria-required="true">Enter valid 5 digit code</label>
                             <input required type="text" id="postal-code" name="postal-code"></input>
-                            <button type="submit" id="submit">Submit</button>
+                            <button type="submit" id="submit-bttn" onClick={this.props.onClick} aria-label="Submit">Submit</button>
                         </form>
                         <section className="results">
                             {this.state.results.map((result) => (

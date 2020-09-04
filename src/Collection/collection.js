@@ -62,7 +62,7 @@ class Collection extends Component {
                                 <option value="Rum">Rum</option>
                                 <option value="Scotch">Scotch</option>
                             </select>
-                            <button type="submit" className="search-btn">Search</button>
+                            <button type="submit" id="search-btn" onClick={this.props.onClick} aria-label="Submit">Search</button>
                         </form>
                         <section className="results">
                             <p>{this.state.results.map((result) => (

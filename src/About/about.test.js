@@ -7,5 +7,5 @@ describe(`About Component`, () => {
         const section = document.createElement('section');
         ReactDOM.render(<About />, section);
         ReactDOM.unmountComponentAtNode(section);
-    })
-})
+    });
+});

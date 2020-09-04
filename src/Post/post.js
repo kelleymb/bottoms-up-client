@@ -56,7 +56,7 @@ class Post extends Component {
                         <textarea id="ingredients-input" className="ingredients"></textarea>
                         <label htmlFor="instructions-list" id="instructions">Instructions:</label>
                         <textarea id="instructions-input" className="instructions"></textarea>
-                        <button type="submit" id="submit-btn">Submit</button>
+                        <button type="submit" id="submit-btn" onClick={this.props.onClick} aria-label="Submit">Submit</button>
                     </form>
                 </section>
             </ErrorBoundary>
