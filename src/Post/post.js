@@ -13,10 +13,10 @@ class Post extends Component {
     handleSubmit = e => {
         e.preventDefault();
         const newRecipe = {
-           drink_name = e.target['drink-name-input'].value,
-           main_liquor = e.target['main-liquor-input'].value,
-           ingredients = e.target['ingredients-input'].value,
-           instructions = e.target['instructions-input'].value
+           drink_name: e.target['drink-name-input'].value,
+           main_liquor: e.target['main-liquor-input'].value,
+           ingredients: e.target['ingredients-input'].value,
+           instructions: e.target['instructions-input'].value
         };
         console.log(JSON.stringify(newRecipe));
         fetch(`${config.API_ENDPOINT}/postrecipe`, {
@@ -33,7 +33,7 @@ class Post extends Component {
             return response.json();
         })
         .then(() => {
-            alert(`Thank you! Your ${drink_name} recipe has been successfully posted!`);
+            alert(`Thank you! Your recipe has been successfully posted!`);
             this.props.history.push('/collections');
         })
         .catch(error => {
