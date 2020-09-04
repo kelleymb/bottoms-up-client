@@ -12,6 +12,9 @@ class Cocktail extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        this.setState({
+            results: [],
+        });
         const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
         fetch(url, {
             "method": "GET" 
@@ -52,7 +55,7 @@ class Cocktail extends Component {
                 <section className="api-result">
                     <div className="result">
                         {this.state.results.map((res) => (
-                            <div>
+                            <div className="cocktail-result-block">
                                 <img id="cocktail-img" alt="cocktail" src={res.drinks[0].strDrinkThumb}></img>
                                 <p>Drink name: {res.drinks[0].strDrink}</p>
                                 <p>Glass: {res.drinks[0].strGlass}</p>
