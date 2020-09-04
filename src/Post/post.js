@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ErrorBoundary from '../ErrorBoundary';
 import config from '../config';
 import './Post.css';
 
@@ -44,19 +45,21 @@ class Post extends Component {
 
     render() {
         return (
-            <section className="post-section">
-                <form className="post-form" onSubmit={this.handleSubmit}>
-                    <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
-                    <input type="text" id="drink-name-input" name="drink-name"></input>
-                    <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
-                    <input type="text" id="main-liquor-input" name="main-liquor"></input>
-                    <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
-                    <textarea id="ingredients-input" className="ingredients"></textarea>
-                    <label htmlFor="instructions-list" id="instructions">Instructions:</label>
-                    <textarea id="instructions-input" className="instructions"></textarea>
-                    <button type="submit" id="submit-btn">Submit</button>
-                </form>
-            </section>
+            <ErrorBoundary>
+                <section className="post-section">
+                    <form className="post-form" onSubmit={this.handleSubmit}>
+                        <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
+                        <input type="text" id="drink-name-input" name="drink-name"></input>
+                        <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
+                        <input type="text" id="main-liquor-input" name="main-liquor"></input>
+                        <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
+                        <textarea id="ingredients-input" className="ingredients"></textarea>
+                        <label htmlFor="instructions-list" id="instructions">Instructions:</label>
+                        <textarea id="instructions-input" className="instructions"></textarea>
+                        <button type="submit" id="submit-btn">Submit</button>
+                    </form>
+                </section>
+            </ErrorBoundary>
         );
     }
 }
