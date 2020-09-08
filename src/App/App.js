@@ -6,7 +6,10 @@ import About from '../About/About';
 import Post from '../Post/Post';
 import Collection from '../Collection/Collection';
 import Footer from '../Footer/Footer';
+import OpenBrewery from '../OpenBreweryDB/OpenBrewery';
+import Cocktail from '../CocktailDB/Cocktail';
 import './App.css';
+
 
 function App() {  
 
@@ -34,6 +37,14 @@ function App() {
           <Route
             path="/collections"
             component={Collection}
+          />
+          <Route
+            path="/random"
+            component={Cocktail}
+          />
+          <Route
+            path="/localbrew"
+            component={OpenBrewery}
           />
         </Route>
       </main>

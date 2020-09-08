@@ -51,7 +51,13 @@ class Post extends Component {
                         <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
                         <input type="text" id="drink-name-input" name="drink-name"></input>
                         <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
-                        <input type="text" id="main-liquor-input" name="main-liquor"></input>
+                        <select id="main-liquor-input" name="main-input">
+                            <option value="Vodka">Vodka</option>
+                            <option value="Tequila">Tequila</option>
+                            <option value="Gin">Gin</option>
+                            <option value="Rum">Rum</option>
+                            <option value="Scotch">Scotch</option>
+                        </select>
                         <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
                         <textarea id="ingredients-input" className="ingredients"></textarea>
                         <label htmlFor="instructions-list" id="instructions">Instructions:</label>
