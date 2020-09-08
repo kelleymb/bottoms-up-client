@@ -66,7 +66,6 @@ class Post extends Component {
            ingredients: e.target['ingredients-input'].value,
            instructions: e.target['instructions-input'].value
         };
-        console.log(JSON.stringify(newRecipe));
         fetch(`${config.API_ENDPOINT}/postrecipe`, {
             method: 'POST',
             headers: {
@@ -86,7 +85,6 @@ class Post extends Component {
         })
         .catch(error => {
             console.error({ error });
-            console.log(error);
         });
     }
 

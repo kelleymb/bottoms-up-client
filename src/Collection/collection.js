@@ -27,7 +27,6 @@ class Collection extends Component {
                 return response.json();
             })
             .then(data => {
-                console.log(data)
                 this.setState({
                     results: [
                         ...data
@@ -36,7 +35,6 @@ class Collection extends Component {
             })
             .catch(error => {
                 console.error({ error });
-                console.log(error);
             });
     }
 
