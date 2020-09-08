@@ -10,16 +10,20 @@ class Post extends Component {
         super(props);
         this.state = {
             drink_name: {
-               value: '' 
+               value: '',
+               touched: false 
             },
             main_liquor: {
-                value: ''
+                value: '',
+                touched: false 
             },
             ingredients: {
-                value: ''
+                value: '',
+                touched: false 
             },
             instructions: {
-                value: ''
+                value: '',
+                touched: false 
             } 
         };
     }
@@ -100,7 +104,9 @@ class Post extends Component {
                     <form className="post-form" onSubmit={this.handleSubmit}>
                         <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
                         <input type="text" id="drink-name-input" name="drink-name"></input>
-                        <ValidationError message={drinkNameError}/>
+                        {this.state.drink_name.touched && (
+                            <ValidationError message={drinkNameError}/>
+                        )}
                         <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
                         <select id="main-liquor-input" name="main-input">
                             <option value="Vodka">Vodka</option>
@@ -109,13 +115,19 @@ class Post extends Component {
                             <option value="Rum">Rum</option>
                             <option value="Scotch">Scotch</option>
                         </select>
-                        <ValidationError message={mainLiquorError}/>
+                        {this.state.main_liquor.touched && (
+                            <ValidationError message={mainLiquorError}/>
+                        )}
                         <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
                         <textarea id="ingredients-input" className="ingredients"></textarea>
-                        <ValidationError message={ingredientsError}/>
+                        {this.state.ingredients.touched && (
+                            <ValidationError message={ingredientsError}/>
+                        )}
                         <label htmlFor="instructions-list" id="instructions">Instructions:</label>
                         <textarea id="instructions-input" className="instructions"></textarea>
-                        <ValidationError message={instructionsError}/>
+                        {this.state.instructions.touched && (
+                            <ValidationError message={instructionsError}/>
+                        )}
                         <button type="submit" id="submit-btn" onClick={this.props.onClick} aria-label="Submit">Submit</button>
                     </form>
                 </section>
