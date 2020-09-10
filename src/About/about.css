@@ -1,5 +1,8 @@
 .about {
     padding: 25px;
+    padding-top: 10px;
+    background: black;
+    opacity: 0.8;
 }
 
 .about-hdr {
@@ -9,4 +12,33 @@
 .why, .how {
     text-align: center;
     padding: 10px;
+    font-size: 18px;
+}
+
+.why-text, .how-text {
+    font-size: 18px;
+}
+
+@media screen and (min-width:550px) {
+
+    .why, .how {
+        font-size: 22px;
+    }
+
+    .why-text, .how-text {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width:850px) {
+
+    .why, .how {
+        font-size: 26px;
+    }
+
+    .why-text, .how-text {
+        font-size: 24px;
+    }
+
 }

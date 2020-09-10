@@ -15,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <img className="app-img" alt="cocktails" src="https://www.maxim.com/.image/t_share/MTUwODg5MTM1MDY0NzU0MDA5/cocktails-promo.jpg" />
       <Nav />
       <header className="App-header">
         <h1>Bottoms Up!</h1>

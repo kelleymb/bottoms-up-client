@@ -1,4 +1,10 @@
 footer {
-    padding: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 8px;
     text-align: center;
+    background-color: black;
+    opacity: 0.8;
 }

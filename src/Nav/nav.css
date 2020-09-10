@@ -12,6 +12,8 @@
     padding-right: 10px;
     overflow: hidden;
     list-style-type: none;
+    background: black;
+    opacity: 0.8;
 }
 
 .nav {
@@ -20,16 +22,16 @@
 
 a:link {
     text-decoration-line: none;
-    color: black;
+    color: white;
 }
 
 a:visited {
-    color: black;
+    color: white;
 }
 
 .nav:hover {
     font-size: larger;
-    background-color: lavenderblush;
+    background-color: lightslategray;
 }
 
 @media screen and (min-width:550px) {
