@@ -57,10 +57,18 @@ class Collection extends Component {
                         <section className="results">
                             <div>{this.state.results.map((result) => (
                                 <div key={result.drink_name} className="collection-search-result">
-                                    <h3>Drink Name: {result.drink_name}</h3>
-                                    <h4>Main Liquor: {result.main_liquor}</h4>
-                                    <div>Ingredients: {result.ingredients}</div>
-                                    <div>Instructions: {result.instructions}</div>
+                                    <div>
+                                        <h4>Drink Name:</h4> {result.drink_name}
+                                    </div>
+                                    <div>
+                                        <h4>Main Liquor:</h4> {result.main_liquor}
+                                    </div>
+                                    <div>
+                                        <h4>Ingredients:</h4> {result.ingredients}
+                                    </div>
+                                    <div>
+                                        <h4>Instructions:</h4> {result.instructions}
+                                    </div>
                                 </div>
                             ))}</div>
                         </section> 

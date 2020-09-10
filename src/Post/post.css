@@ -11,9 +11,14 @@
     font-size: 20px;
 }
 
-#drink-name-input, #main-liquor-input, #ingredients-input, #instructions-input {
+#drink-name-input, #ingredients-input, #instructions-input {
     padding: 10px;
     width: 285px;
+}
+
+#main-liquor-input {
+    padding: 10px;
+    width: 310px;
 }
 
 #ingredients-input, #instructions-input {
@@ -24,5 +29,46 @@
     margin: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+@media screen and (min-width:550px) {
+
+    #drink-name-input, #ingredients-input, #instructions-input {
+        width: 380px;
+    }
+    
+    #main-liquor-input {
+        width: 405px;
+    }
+
+    #submit-btn {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (min-width:850px) {
+
+    #drink-name-input, #ingredients-input, #instructions-input {
+        width: 500px;
+    }
+    
+    #main-liquor-input {
+        width: 525px;
+    }
+
+    #submit-btn {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 18px;
+    }
+
+}

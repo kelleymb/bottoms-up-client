@@ -11,7 +11,7 @@ import './Nav.css';
 class Nav extends Component {
     render() {
         return (
-            <ul>
+            <ul className="app-nav">
                 <li className="nav" key={Home}><Link className="nav-link" to="/">Home</Link></li>
                 <li className="nav" key={Collection}><Link className="nav-link" to="/collections">Collection</Link></li>
                 <li className="nav" key={Post}><Link className="nav-link" to="/post">Post</Link></li>

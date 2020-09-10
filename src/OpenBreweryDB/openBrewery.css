@@ -6,6 +6,103 @@
     padding: 10px;
 }
 
+.info {
+    text-align: center;
+    font-size: 15px;
+}
+
+.open-brewery-db-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-hdr {
+    text-align: center;
+}
+
 #postal-label {
     padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#postal-code {
+    padding: 5px;
+}
+
+#submit-bttn {
+    margin: 5px;
+    padding: 5px;
+}
+
+.search-form {
+    padding: 5px;
+    text-align: center;
+}
+
+.name-hdr, .postal-hdr, .state-hdr, .phone-hdr, .website-hdr {
+    font-size: 18px;
+}
+
+.result-text {
+    font-size: 17px;
+}
+
+@media screen and (min-width:550px) {
+
+    .info {
+        font-size: 20px;
+    }
+
+    .name-hdr, .postal-hdr, .state-hdr, .phone-hdr, .website-hdr {
+        font-size: 22px;
+    }
+    
+    .result-text {
+        font-size: 20px;
+    }
+
+    #postal-label {
+        font-size: 20px;
+    }
+
+    #postal-code {
+        font-size: 20px;
+    } 
+
+    #submit-bttn {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (min-width:850px) {
+
+    .info {
+        font-size: 23px;
+    }
+
+    .name-hdr, .postal-hdr, .state-hdr, .phone-hdr, .website-hdr {
+        font-size: 25px;
+    }
+    
+    .result-text {
+        font-size: 23px;
+    }
+
+    #postal-label {
+        font-size: 23px;
+    }
+
+    #postal-code {
+        font-size: 23px;
+    } 
+
+    #submit-bttn {
+        font-size: 23px;
+    }
+
 }

@@ -119,12 +119,13 @@ class Post extends Component {
                 <section className="post-section">
                     <form className="post-form" onSubmit={this.handleSubmit}>
                         <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
-                        <input type="text" id="drink-name-input" name="drink-name" onChange={e => this.updateDrinkName(e.target.value)}></input>
+                        <input required aria-required type="text" id="drink-name-input" name="drink-name" onChange={e => this.updateDrinkName(e.target.value)}></input>
                         {this.state.drink_name.touched && (
                             <ValidationError message={drinkNameError}/>
                         )}
                         <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
                         <select id="main-liquor-input" name="main-input" onChange={e => this.updateMainLiquor(e.target.value)}>
+                            <option value="blank"></option>
                             <option value="Vodka">Vodka</option>
                             <option value="Tequila">Tequila</option>
                             <option value="Gin">Gin</option>
@@ -135,12 +136,12 @@ class Post extends Component {
                             <ValidationError message={mainLiquorError}/>
                         )}
                         <label htmlFor="ingredients-list" id="ingredients">Ingredients:</label>
-                        <textarea id="ingredients-input" className="ingredients" onChange={e => this.updateIngredients(e.target.value)}></textarea>
+                        <textarea required aria-required id="ingredients-input" className="ingredients" onChange={e => this.updateIngredients(e.target.value)}></textarea>
                         {this.state.ingredients.touched && (
                             <ValidationError message={ingredientsError}/>
                         )}
                         <label htmlFor="instructions-list" id="instructions">Instructions:</label>
-                        <textarea id="instructions-input" className="instructions" onChange={e => this.updateInstructions(e.target.value)}></textarea>
+                        <textarea required aria-required id="instructions-input" className="instructions" onChange={e => this.updateInstructions(e.target.value)}></textarea>
                         {this.state.instructions.touched && (
                             <ValidationError message={instructionsError}/>
                         )}

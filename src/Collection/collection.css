@@ -2,10 +2,34 @@
     padding: 10px;
 }
 
+.browse {
+    padding-top: 20px;
+    font-size: 25px;
+}
+
+#main-input {
+    width: 200px;
+    padding: 10px;
+}
+
+#search-btn {
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
 .results, .browse, .main-search-form {
     text-align: center;
 }
 
 .collection-search-result {
-    padding: 15px;
+    padding: 30px;
+}
+
+@media screen and (min-width:550px) {
+
+    .collection-search-result {
+        font-size: larger;
+    }
+
 }

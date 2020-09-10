@@ -59,25 +59,25 @@ class Cocktail extends Component {
                             {this.state.results.map((res) => (
                                 <div key={res.drinks[0].strDrink} className="cocktail-result-block">
                                     <img id="cocktail-img" alt="cocktail" src={res.drinks[0].strDrinkThumb}></img>
-                                    <p>Drink name: {res.drinks[0].strDrink}</p>
-                                    <p>Glass: {res.drinks[0].strGlass}</p>
+                                    <h4 className="drink-name">Drink name:</h4> <p className="text">{res.drinks[0].strDrink}</p>
+                                    <h4 className="glass">Glass:</h4> <p>{res.drinks[0].strGlass}</p>
                                     <div>
-                                        <p>Ingredients:</p> 
-                                        <p>{res.drinks[0].strMeasure1}  {res.drinks[0].strIngredient1}</p>
-                                        <p>{res.drinks[0].strMeasure2}  {res.drinks[0].strIngredient2}</p>
-                                        <p>{res.drinks[0].strMeasure3}  {res.drinks[0].strIngredient3}</p>
-                                        <p>{res.drinks[0].strMeasure4}  {res.drinks[0].strIngredient4}</p>
-                                        <p>{res.drinks[0].strMeasure5}  {res.drinks[0].strIngredient5}</p>
-                                        <p>{res.drinks[0].strMeasure6}  {res.drinks[0].strIngredient6}</p> 
-                                        <p>{res.drinks[0].strMeasure7}  {res.drinks[0].strIngredient7}</p>
-                                        <p>{res.drinks[0].strMeasure8}  {res.drinks[0].strIngredient8}</p>
-                                        <p>{res.drinks[0].strMeasure9}  {res.drinks[0].strIngredient9}</p>
-                                        <p>{res.drinks[0].strMeasure10} {res.drinks[0].strIngredient10}</p>
-                                        <p>{res.drinks[0].strMeasure11} {res.drinks[0].strIngredient11}</p>
+                                        <h4 className="ingredients">Ingredients:</h4> 
+                                        <p className="text">{res.drinks[0].strMeasure1}  {res.drinks[0].strIngredient1}</p>
+                                        <p className="text">{res.drinks[0].strMeasure2}  {res.drinks[0].strIngredient2}</p>
+                                        <p className="text">{res.drinks[0].strMeasure3}  {res.drinks[0].strIngredient3}</p>
+                                        <p className="text">{res.drinks[0].strMeasure4}  {res.drinks[0].strIngredient4}</p>
+                                        <p className="text">{res.drinks[0].strMeasure5}  {res.drinks[0].strIngredient5}</p>
+                                        <p className="text">{res.drinks[0].strMeasure6}  {res.drinks[0].strIngredient6}</p> 
+                                        <p className="text">{res.drinks[0].strMeasure7}  {res.drinks[0].strIngredient7}</p>
+                                        <p className="text">{res.drinks[0].strMeasure8}  {res.drinks[0].strIngredient8}</p>
+                                        <p className="text">{res.drinks[0].strMeasure9}  {res.drinks[0].strIngredient9}</p>
+                                        <p className="text">{res.drinks[0].strMeasure10} {res.drinks[0].strIngredient10}</p>
+                                        <p className="text">{res.drinks[0].strMeasure11} {res.drinks[0].strIngredient11}</p>
                                     </div>
                                     <div>
-                                    <p>Instructions:</p>
-                                        <p>{res.drinks[0].strInstructions}</p> 
+                                    <h4 className="instructions">Instructions:</h4>
+                                        <p className="text">{res.drinks[0].strInstructions}</p> 
                                     </div>
                                 </div>
                             ))}

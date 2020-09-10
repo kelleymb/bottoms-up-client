@@ -1,15 +1,62 @@
-ul {
+.app-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-weight: lighter;
     font-size: 20px;
     margin: 0px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     overflow: hidden;
     list-style-type: none;
 }
 
 .nav {
-    padding: 10px;
+    padding: 5px;
+}
+
+a:link {
+    text-decoration-line: none;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+.nav:hover {
+    font-size: larger;
+    background-color: lavenderblush;
+}
+
+@media screen and (min-width:550px) {
+
+    .app-nav {
+        flex-direction: row;
+    }
+
+    .nav {
+        font-size: 23px;
+    }
+
+    .nav:hover {
+        font-size: 29px;
+    }
+
+}
+
+@media screen and (min-width:850px) {
+
+    .nav {
+        font-size: 26px;
+        padding: 15px;
+    }
+
+    .nav:hover {
+        font-size: 35px;
+    }
+
 }

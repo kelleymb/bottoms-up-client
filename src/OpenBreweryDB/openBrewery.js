@@ -54,7 +54,7 @@ class OpenBrewery extends Component {
                         <p>Search your local breweries courtesy of <a href="https://www.openbrewerydb.org/" rel="noreferrer noopener" target="_blank">Open Brewery API</a></p>
                     </section>
                     <section className="open-brewery-db-form">
-                        <h4>Search by Postal Code</h4>
+                        <h4 className="search-hdr">Search by Postal Code</h4>
                         <form className="search-form" onSubmit={this.handleSubmit}>
                             <label htmlFor="postal-code" id="postal-label" aria-required="true">Enter valid 5 digit code</label>
                             <input required type="text" id="postal-code" name="postal-code"></input>
@@ -63,11 +63,11 @@ class OpenBrewery extends Component {
                         <section className="results">
                             {this.state.results.map((result) => (
                                 <div key={result.name} className="result">
-                                    <p>Name: {result.name}</p>
-                                    <p>Postal Code: {result.postal_code}</p>
-                                    <p>State: {result.state}</p>
-                                    <p>Phone: {result.phone}</p>
-                                    <p>Website: {result.website_url}</p>
+                                    <h4 className="name-hdr">Name:</h4> <p className="result-text">{result.name}</p>
+                                    <h4 className="postal-hdr">Postal Code:</h4> <p className="result-text">{result.postal_code}</p>
+                                    <h4 className="state-hdr">State:</h4> <p className="result-text">{result.state}</p>
+                                    <h4 className="phone-hdr">Phone:</h4> <p className="result-text">{result.phone}</p>
+                                    <h4 className="website-hdr">Website:</h4> <p className="result-text"><a href={result.website_url}>{result.website_url}</a></p>
                                 </div>
                             ))}
                         </section>

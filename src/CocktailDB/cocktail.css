@@ -1,8 +1,56 @@
 .cocktail-db {
-    padding: 10px;
+    padding: 25px;
+}
+
+.info {
+    text-align: center;
+}
+
+.api-result {
+    text-align: center;
+}
+
+.cocktail-db-api {
+    padding: 15px;
+    text-align: center;
+}
+
+#random {
+    padding: 15px;
+    font-size: 15px;
 }
 
 #cocktail-img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+}
+
+.drink-name, .glass, .ingredients, .instructions {
+    font-size: 20px;
+}
+
+.text {
+    font-size: 18px;
+}
+
+@media screen and (min-width:650px) {
+
+    .cocktail-db-api {
+        padding: 25px;
+    }
+
+    #cocktail-img {
+        max-width: 60%;
+        height: auto;
+    }
+
+}
+
+@media screen and (min-width:875px) {
+
+    #cocktail-img {
+        max-width: 40%;
+        height: auto;
+    }
+
 }
