@@ -10,7 +10,7 @@ class Collection extends Component {
         super(props);
         this.state = {
             results: [],
-        }
+        };
     }
 
     //fetch request to BottomsUp API, search by main liquor
