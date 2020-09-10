@@ -17,7 +17,7 @@
 }
 
 .nav {
-    padding: 5px;
+    padding: 0px;
 }
 
 a:link {
@@ -38,6 +38,7 @@ a:visited {
 
     .app-nav {
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .nav {
