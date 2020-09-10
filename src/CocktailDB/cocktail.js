@@ -11,6 +11,7 @@ class Cocktail extends Component {
         };
     }
 
+    //fetch request to CocktailDB on submit
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState({

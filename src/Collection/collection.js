@@ -13,6 +13,7 @@ class Collection extends Component {
         }
     }
 
+    //fetch request to BottomsUp API, search by main liquor
     handleSubmit = e => {
         e.preventDefault();
         this.setState({

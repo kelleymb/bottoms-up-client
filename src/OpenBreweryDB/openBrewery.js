@@ -11,6 +11,7 @@ class OpenBrewery extends Component {
         };
     }
     
+    //fetch request to Open Brewery DB on form submit, search by postal code
     handleSubmit = (e) => {
         e.preventDefault();
         this.setState({

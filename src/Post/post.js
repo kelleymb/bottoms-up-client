@@ -78,6 +78,7 @@ class Post extends Component {
         }
     }
 
+    //POST request to BottomsUp API on form submit
     handleSubmit = e => {
         e.preventDefault();
         const newRecipe = {
