@@ -9,7 +9,7 @@ class About extends Component {
                 <h2 className="about-hdr">About</h2>
                 <h3 className="why">Why Bottoms Up?</h3>
                     <section className="why-text">
-                       <p>Since COVID hit the US, so much has changed in our routines. With quarantines and social distancing, things have never been so glum!</p>
+                        <p>Since COVID hit the US, so much has changed in our routines. With quarantines and social distancing, things have never been so glum!</p>
                         <p>But fear not, Bottoms Up! is here to help you quarantine in style, whether it's a virtual happy hour or a weekend at home, we've got you covered.</p>
                         <p>Be your own bartender, search through various Vodka, Gin, Scotch, Tequila, and Rum recipes and even post your own creations!</p> 
                     </section>
