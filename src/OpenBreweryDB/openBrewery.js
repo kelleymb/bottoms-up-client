@@ -51,7 +51,7 @@ class OpenBrewery extends Component {
                <section className="open-brewery-db">
                     <section className="info">
                         <p>Need a break?</p> 
-                        <p>Search your local breweries courtesy of <a href="https://www.openbrewerydb.org/" rel="noreferrer noopener" target="_blank">Open Brewery API</a></p>
+                        <p>Search your local breweries courtesy of <a className="brewery-link" href="https://www.openbrewerydb.org/" rel="noreferrer noopener" target="_blank">Open Brewery API</a></p>
                     </section>
                     <section className="open-brewery-db-form">
                         <h4 className="search-hdr">Search by Postal Code</h4>
@@ -67,7 +67,7 @@ class OpenBrewery extends Component {
                                     <h4 className="postal-hdr">Postal Code:</h4> <p className="result-text">{result.postal_code}</p>
                                     <h4 className="state-hdr">State:</h4> <p className="result-text">{result.state}</p>
                                     <h4 className="phone-hdr">Phone:</h4> <p className="result-text">{result.phone}</p>
-                                    <h4 className="website-hdr">Website:</h4> <p className="result-text"><a href={result.website_url}>{result.website_url}</a></p>
+                                    <h4 className="website-hdr">Website:</h4> <p className="result-text"><a className="website" href={result.website_url}>{result.website_url}</a></p>
                                 </div>
                             ))}
                         </section>

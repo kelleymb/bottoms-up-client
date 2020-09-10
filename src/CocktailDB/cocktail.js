@@ -49,7 +49,7 @@ class Cocktail extends Component {
                <section className="cocktail-db">
                     <section className="info">
                         <p>Not sure what you want?</p> 
-                        <p>Generate a recipe at random courtesy of <a href="https://www.thecocktaildb.com/" rel="noreferrer noopener" target="_blank">Cocktail DB API</a></p>
+                        <p>Generate a recipe at random courtesy of <a className="cocktail-link" href="https://www.thecocktaildb.com/" rel="noreferrer noopener" target="_blank">Cocktail DB API</a></p>
                     </section>
                     <form className="cocktail-db-api" onSubmit={this.handleSubmit}>
                         <button type="submit" id="random" name="random" onClick={this.props.onClick} aria-label="Submit">Generate random drink!</button>
@@ -60,7 +60,7 @@ class Cocktail extends Component {
                                 <div key={res.drinks[0].strDrink} className="cocktail-result-block">
                                     <img id="cocktail-img" alt="cocktail" src={res.drinks[0].strDrinkThumb}></img>
                                     <h4 className="drink-name">Drink name:</h4> <p className="text">{res.drinks[0].strDrink}</p>
-                                    <h4 className="glass">Glass:</h4> <p>{res.drinks[0].strGlass}</p>
+                                    <h4 className="glass">Glass:</h4> <p className="text">{res.drinks[0].strGlass}</p>
                                     <div>
                                         <h4 className="ingredients">Ingredients:</h4> 
                                         <p className="text">{res.drinks[0].strMeasure1}  {res.drinks[0].strIngredient1}</p>

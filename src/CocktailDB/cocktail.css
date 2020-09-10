@@ -1,7 +1,19 @@
 .cocktail-db {
     padding: 25px;
+    padding-left: 0px;
     background: black;
     opacity: 0.8;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.cocktail-link:link {
+    text-decoration-line: underline;
+}
+
+.cocktail-link:hover {
+    font-size: larger;
+    color: pink;
 }
 
 .info {
@@ -10,6 +22,8 @@
 
 .api-result {
     text-align: center;
+    padding-bottom: 10px;
+    margin: 5px;
 }
 
 .cocktail-db-api {
@@ -22,6 +36,11 @@
     font-size: 15px;
 }
 
+#random:hover {
+    font-size: 20px;
+    background-color: pink;
+}
+
 #cocktail-img {
     max-width: 80%;
     height: auto;
@@ -29,10 +48,13 @@
 
 .drink-name, .glass, .ingredients, .instructions {
     font-size: 20px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .text {
-    font-size: 18px;
+    font-size: 20px;
+    margin: 1px;
 }
 
 @media screen and (min-width:650px) {
@@ -46,6 +68,16 @@
         height: auto;
     }
 
+    #random {
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    #random:hover {
+        font-size: 23px;
+    }
+    
+
 }
 
 @media screen and (min-width:875px) {
@@ -54,5 +86,15 @@
         max-width: 40%;
         height: auto;
     }
+
+    #random {
+        padding: 25px;
+        font-size: 25px;
+    }
+
+    #random:hover {
+        font-size: 26px;
+    }
+    
 
 }

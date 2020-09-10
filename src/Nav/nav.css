@@ -42,6 +42,7 @@ a:visited {
 
     .nav {
         font-size: 23px;
+        padding: 10px;
     }
 
     .nav:hover {

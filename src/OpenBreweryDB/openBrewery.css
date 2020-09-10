@@ -1,11 +1,15 @@
 .open-brewery-db {
     padding: 10px;
+    padding-left: 0px;
+    margin-bottom: 15px;
     background: black;
     opacity: 0.8;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .result {
-    padding: 10px;
+    padding: 15px;
 }
 
 .info {
@@ -23,9 +27,11 @@
 
 .search-hdr {
     text-align: center;
+    font-size: 15px;
+    margin: 0;
 }
 
-#postal-label {
+#postal-label  {
     padding: 5px;
     display: flex;
     justify-content: center;
@@ -41,16 +47,41 @@
 }
 
 .search-form {
-    padding: 5px;
+    padding: 15px;
     text-align: center;
 }
 
 .name-hdr, .postal-hdr, .state-hdr, .phone-hdr, .website-hdr {
     font-size: 18px;
+    margin: 0;
 }
 
 .result-text {
-    font-size: 17px;
+    font-size: 25px;
+    margin: 5px;
+}
+
+.result-text:hover {
+    font-size: 20px;
+    color: pink;
+}
+
+.brewery-link:link {
+    text-decoration-line: underline;
+}
+
+.brewery-link:hover {
+    font-size: larger;
+    color: pink;
+}
+
+.website:link {
+    text-decoration-line: underline;
+}
+
+.website:hover {
+    font-size: larger;
+    color: pink;
 }
 
 @media screen and (min-width:550px) {
@@ -68,6 +99,10 @@
     }
 
     #postal-label {
+        font-size: 18px;
+    }
+
+    .search-hdr {
         font-size: 20px;
     }
 
@@ -77,6 +112,10 @@
 
     #submit-bttn {
         font-size: 20px;
+    }
+
+    .result-text:hover {
+        font-size: 25px;
     }
 
 }
@@ -95,7 +134,11 @@
         font-size: 23px;
     }
 
-    #postal-label {
+    #postal-label{
+        font-size: 20px;
+    }
+
+    .search-hdr {
         font-size: 23px;
     }
 
@@ -105,6 +148,10 @@
 
     #submit-bttn {
         font-size: 23px;
+    }
+
+    .result-text:hover {
+        font-size: 30px;
     }
 
 }

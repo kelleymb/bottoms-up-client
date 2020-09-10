@@ -1,12 +1,43 @@
 .about {
+    display: block;
     padding: 25px;
-    padding-top: 10px;
+    padding-left: 0px;
+    margin: 0;
     background: black;
     opacity: 0.8;
+    width: 100vw;
+    min-height: 100vh;
 }
 
+.collections:link {
+    text-decoration-line: underline;
+}
+
+.random:link {
+    text-decoration-line: underline;
+}
+
+.post:link {
+    text-decoration-line: underline;
+}
+
+.collections:hover {
+    color: pink;
+}
+
+.random:hover {
+    color: pink;
+}
+
+.post:hover {
+    color: pink;
+}
+
+
 .about-hdr {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
 }
 
 .why, .how {
@@ -15,8 +46,15 @@
     font-size: 18px;
 }
 
+.how-text {
+    list-style-type: none;
+}
+
 .why-text, .how-text {
+    text-align: center;
     font-size: 18px;
+    width: 80%;
+    transform: translate(10%);
 }
 
 @media screen and (min-width:550px) {
