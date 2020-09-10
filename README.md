@@ -42,6 +42,6 @@ Run npm test to ensure a stable build
 
 This is only the front end client, so develop locally you'll need the backend server as well.
 
-To get the backend up and running see https://github.com/kelleymb/btr-api
+To get the backend up and running see https://github.com/kelleymb/bottoms-up-api
 
 Deployments are handled through Vercel and can be run via npm run deploy
