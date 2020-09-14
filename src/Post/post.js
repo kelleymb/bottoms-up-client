@@ -125,8 +125,8 @@ class Post extends Component {
                             <ValidationError message={drinkNameError}/>
                         )}
                         <label htmlFor="main-liquor" id="main-liquor">Main Liquor:</label>
-                        <select id="main-liquor-input" name="main-input" onChange={e => this.updateMainLiquor(e.target.value)}>
-                            <option value="blank"></option>
+                        <select required aria-required id="main-liquor-input" name="main-input" onChange={e => this.updateMainLiquor(e.target.value)}>
+                            <option value="">Please choose a liquor</option>
                             <option value="Vodka">Vodka</option>
                             <option value="Tequila">Tequila</option>
                             <option value="Gin">Gin</option>
