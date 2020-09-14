@@ -118,7 +118,7 @@ class Post extends Component {
         return (
             <ErrorBoundary>
                 <section className="post-section">
-                    <form className="post-form" onSubmit={this.handleSubmit}>
+                    <form aria-label="Post Liquor Recipe" className="post-form" onSubmit={this.handleSubmit}>
                         <label htmlFor="drink-name" id="drink-name">Drink Name:</label>
                         <input required aria-required type="text" id="drink-name-input" name="drink-name" onChange={e => this.updateDrinkName(e.target.value)}></input>
                         {this.state.drink_name.touched && (

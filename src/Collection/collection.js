@@ -45,7 +45,7 @@ class Collection extends Component {
                 <section className="collection">
                     <section className="collection-search-section">
                     <h3 className="browse">Browse our collection</h3>
-                        <form className="main-search-form" onSubmit={this.handleSubmit}>
+                        <form aria-label="Search Liquor Recipe" className="main-search-form" onSubmit={this.handleSubmit}>
                             <select id="main-input" name="main-input">
                                 <option value="Vodka">Vodka</option>
                                 <option value="Tequila">Tequila</option>

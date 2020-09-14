@@ -52,7 +52,7 @@ class Cocktail extends Component {
                         <p>Not sure what you want?</p> 
                         <p>Generate a recipe at random courtesy of <a className="cocktail-link" href="https://www.thecocktaildb.com/" rel="noreferrer noopener" target="_blank">Cocktail DB API</a></p>
                     </section>
-                    <form className="cocktail-db-api" onSubmit={this.handleSubmit}>
+                    <form aria-label="Generate Random Recipe" className="cocktail-db-api" onSubmit={this.handleSubmit}>
                         <button type="submit" id="random" name="random" onClick={this.props.onClick} aria-label="Submit">Generate random drink!</button>
                     </form>    
                     <section className="api-result">
